@@ -32,6 +32,6 @@ _M.bin2hex = function(hex, hexlen, bin, binlen)
 end
 _M.version_string = function() return ffi.string(lib.sodium_version_string()) end
 _M.library_version_major = function() return tonumber(lib.sodium_library_version_major()) end
-_M.library_version_minor = function() return tonumber(lib.sodium_library_version_minor)) end
+_M.library_version_minor = function() return tonumber(lib.sodium_library_version_minor()) end
 
 return _M
