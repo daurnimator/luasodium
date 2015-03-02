@@ -45,7 +45,7 @@ _M.seed_keypair = lib.crypto_sign_seed_keypair
 _M.keypair = function(pk, sk)
 	pk = pk or ffi.new("unsigned char[?]", _M.publickeybytes())
 	sk = sk or ffi.new("unsigned char[?]", _M.secretkeybytes())
-	assert(lib.crypto_sign_keypairfunction(pk, sk) == 0, "crypto_sign_keypairfunction returned non-zero")
+	assert(lib.crypto_sign_keypair(pk, sk) == 0, "crypto_sign_keypairfunction returned non-zero")
 	return pk, sk
 end
 _M.sign = function(sm, smlen, m, mlen, sk)
